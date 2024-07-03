@@ -138,6 +138,50 @@
         </div>
 
     </section>
+    <section id="accordion" class="tutorial">
+        <div class="icon"><i class="fa-solid fa-location-crosshairs"></i></div>
+        <h2 class="section__title">Các bước sử dụng dịch vụ</h2>
+        <button class="accordion"><span>Bước 1</span>Chọn dịch vụ</button>
+        <div class="accordion__panel">
+            <p>Khách hàng truy cập vào trang web và chọn dịch vụ muốn sử dụng
+            </p>
+        </div>
+
+
+        <button class="accordion"><span>Bước 2</span>Thanh toán</button>
+        <div class="accordion__panel">
+            <p>Sau khi chọn dịch vụ, khách hàng tiến hành thanh toán bằng các phương thức được cung cấp
+            </p>
+
+        </div>
+
+        <button class="accordion"><span>Bước 3</span>Nhận link hướng dẫn </button>
+        <div class="accordion__panel">
+            <p>Sau khi thanh toán, sẽ có đường link hướng dẫn được gửi về tin nhắn số điện thoại cho khách hàng.</p>
+        </div>
+
+        <button class="accordion"><span>Bước 4</span>Di chuyển đến điểm chụp</button>
+        <div class="accordion__panel">
+            <p>Sau khi nhận link, khách hàng di chuyển đến địa điểm chụp. Đội ngũ sẽ đợi quý khách ở đây</p>
+        </div>
+
+        <button class="accordion"><span>Ngày 5</span>Tạo dáng</button>
+        <div class="accordion__panel">
+            <p>Khách hàng vào vị trí đã setup và tạo dáng, camera sẽ tiến hành chụp và quay vide
+            </p>
+        </div>
+
+        <button class="accordion"><span>Bước 6</span>Kiểm tra thành quả </button>
+        <div class="accordion__panel">
+            <p>Khách hàng kiểm tra thành quả và chờ đợi để có file.
+            </p>
+        </div>
+    </section>
+
+
+
+
+
 
     <script>
         document.addEventListener("DOMContentLoaded", function () {
@@ -153,6 +197,22 @@
                     this.classList.toggle("active");
                 });
             });
+
+            var accordions = document.querySelectorAll(
+                ".accordion, .faqs, .dropbtn-mobile"
+            );
+            accordions.forEach(function (accordion) {
+                accordion.addEventListener("click", function () {
+                    this.classList.toggle("active");
+                    var panel = this.nextElementSibling;
+                    if (panel.style.maxHeight) {
+                        panel.style.maxHeight = null;
+                    } else {
+                        panel.style.maxHeight = panel.scrollHeight + "px";
+                    }
+                });
+            })
+
         });
 
     </script>
