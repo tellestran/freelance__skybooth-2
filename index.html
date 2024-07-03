@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.5.2/css/all.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bai+Jamjuree:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./css/homepage.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Outfit:wght@100..900&display=swap"
+        rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <title>Skybooth</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <section class="nav">
+        <a class="nav__logo">Skybooth</a>
+        <div class="nav__menu">
+            <a href="#" class="nav__link">Trang chủ</a>
+            <a href="#" class="nav__link">Giới thiệu</a>
+            <a href="#" class="nav__link">Tìm hiểu dịch vụ</a>
+        </div>
+    </section>
+    <section class="jumbotron">
+        <div class="jumbotron__content">
+            <div class="jumbotron__content-thumbail">Skybooth</div>
+            <h1>Chào mừng đến với SkyBooth - Nơi mang đến cho bạn trải nghiệm chụp ảnh và quay video độc đáo từ bầu
+                trời!</h1>
+            <button>Tìm hiểu thêm</button>
+
+        </div>
+    </section>
+    <section class="introduction">
+        <div class="introduction__content">
+            <div class="icon"><i class="fa-solid fa-camera-retro"></i></div>
+            <div class="title">Dịch vụ của chúng tôi</div>
+            <p class="para">Chào mừng đến với <span>SkyBooth</span> - Nơi mang đến cho bạn trải nghiệm chụp ảnh và quay
+                video độc đáo từ bầu trời! Tại SkyBooth,
+                chúng tôi không chỉ cung cấp những hình ảnh đẹp mắt và độ phân giải cao từ không gian, mà còn mang lại
+                trải nghiệm độc
+                đáo và mới mẻ đáp ứng được mọi yêu cầu của bạn. </p>
+            <button>Tìm hiểu thêm</button>
+        </div>
+        <div class="introduction__img">
+            <video controls loop autoplay>
+                <source src="./assets/header-video.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+    </section>
+    <section class="game-section">
+        <div class="icon"><i class="fa-solid fa-location-crosshairs"></i></div>
+        <h2 class="section__title">Chúng tôi đã có mặt ở</h2>
+        <div class="item-container">
+            <div class="item active" style="background-image: url(./assets/img-1.jpg);">
+                <div class="item-desc">
+                    <h3>Cầu Bãi Cháy</h3>
+                    <p>Cầu Bãi Cháy Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    <a href="#">Tìm hiểu thêm</a>
+                </div>
+            </div>
+            <div class="item" style="background-image: url(./assets/img-2.png);">
+                <div class="item-desc">
+                    <h3>Phú Quốc</h3>
+                    <p>Phú Quốc Lorem ipsum dolor sit amet consectetur, adipisicing elit. Atque, optio!</p>
+                    <a href="#">Tìm hiểu thêm</a>
+
+                </div>
+            </div>
+            <div class="item" style="background-image: url(./assets/img-3.png);">
+                <div class="item-desc">
+                    <h3>Hang Múa - Ninh Bình</h3>
+                    <p>Phú Quốc Lorem ipsum dolor sit amet consectetur, adipisicing elit. Atque, optio!</p>
+                    <a href="#">Tìm hiểu thêm</a>
+
+                </div>
+            </div>
+            <div class="item" style="background-image: url(./assets/img-4.jpg);">
+                <div class="item-desc">
+                    <h3>Cầu Vàng - Bà Nà Hill</h3>
+                    <p>Phú Quốc Lorem ipsum dolor sit amet consectetur, adipisicing elit. Atque, optio!</p>
+                    <a href="#">Tìm hiểu thêm</a>
+                </div>
+            </div>
+            <div class="item" style="background-image: url(./assets/img-1.jpg);">
+                <div class="item-desc">
+                    <h3>Núi Bà Đen - Bình Định</h3>
+                    <p>Phú Quốc Lorem ipsum dolor sit amet consectetur, adipisicing elit. Atque, optio!</p>
+                    <a href="#">Tìm hiểu thêm</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const items = document.querySelectorAll(".item");
+
+            items.forEach(item => {
+                item.addEventListener("click", function () {
+                    items.forEach(otherItem => {
+                        if (otherItem !== this) {
+                            otherItem.classList.remove("active");
+                        }
+                    });
+                    this.classList.toggle("active");
+                });
+            });
+        });
+
+    </script>
+</body>
+
+</html>
