@@ -30,6 +30,19 @@
             <i class="fa-sharp fa-solid fa-arrow-down"></i>
         </button>
     </div>
+    <div class="nav__content-mobile" id="nav__mobile">
+        <div class="dropdown-btn"><a class="nav__content-element dropbtn-mobile" href="https://www.facebook.com">Về
+                chúng
+                tôi</a></div>
+        <div class="dropdown-btn"><a class="nav__content-element dropbtn-mobile" href="#">Trang chủ</a></div>
+        <div class="dropdown-btn"><a class="nav__content-element dropbtn-mobile" href="#">Đặt dịch vụ</a></div>
+        <div class="dropdown-btn"><a class="nav__content-element dropbtn-mobile" href="#">Blog</a></div>
+        <div class="dropdown-btn"><a class="nav__content-element dropbtn-mobile" href="#">Hợp tác</a></div>
+        <div class="dropdown-btn"><a class="nav__content-element dropbtn-mobile" href="#">Về Chúng tôi</a>
+        </div>
+        <button id="exit-btn"><i class="fa-solid fa-xmark"></i></button>
+    </div>
+
     <div class="anchor anchor1"></div>
     <section class="nav" id="navbar">
         <a class="nav__logo">Skybooth</a>
@@ -40,6 +53,8 @@
             <a href="#" class="nav__link">Hợp tác</a>
             <a href="#" class="nav__link">Về chúng tôi</a>
         </div>
+        <button href="#" class="menu__btn" id="menu-btn"><i class="fa-solid fa-bars" id="menu-btn-i"></i></button>
+
     </section>
     <div class="anchor anchor1"></div>
 
@@ -343,6 +358,7 @@
             <div class="number text">Số ĐKKD:<span> 0110253444 </span></div>
             <div class="number text">Sở KH và ĐT Tp.Hà Nội cấp ngày:<span> 16/02/2023 </span></div>
         </div>
+
         <div class="footer__element">
             <h2>Liên hệ</h2>
             <a href="#"><i class="fa-solid fa-envelope"></i>
@@ -391,9 +407,6 @@
                 <p>Youtube</p>
             </a>
         </div>
-
-
-
     </section>
     <div class="anchor anchor10"></div>
 
@@ -426,14 +439,20 @@
                     }
                 });
             })
+
             window.addEventListener('scroll', function () {
                 const navbar = document.getElementById('navbar');
+                const menuBtn = document.getElementById('menu-btn-i');
                 if (window.scrollY > 50) { // Change 50 to the scroll threshold you prefer
                     navbar.classList.add('scrolled');
+                    menuBtn.classList.add('scrolled');
                 } else {
                     navbar.classList.remove('scrolled');
+                    menuBtn.classList.remove('scrolled');
                 }
             });
+
+
             const sections = document.querySelectorAll('.anchor');
             const btnUp = document.getElementById('up');
             const btnDown = document.getElementById('down');
@@ -456,6 +475,33 @@
                     scrollToSection(currentSection);
                 }
             });
+
+            var navMobile = document.getElementsByClassName("nav__content-mobile")[0];
+            var menuBtn = document.getElementById("menu-btn");
+            var exitBtn = document.getElementById("exit-btn");
+
+            if (menuBtn && navMobile) {
+                menuBtn.addEventListener("click", function () {
+                    navMobile.classList.add("open");
+                });
+            } else {
+                exitBtn.addEventListener("click", function () {
+                    console.log("exit");
+                    navMobile.classList.remove("open");
+                });
+            }
+
+            if (exitBtn && navMobile) {
+                exitBtn.addEventListener("click", function () {
+                    console.log("exit");
+                    navMobile.classList.remove("open");
+                });
+            }
+
+
+
+
+
         });
     </script>
 </body>

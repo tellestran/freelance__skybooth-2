@@ -5,7 +5,6 @@
   --black: #181818;
   --gray: rgba(0, 0, 0, 0.1);
   --outfit: "Outfit", sans-serif;
-  --eb: "EB Garamond", serif;
 }
 
 * {
@@ -62,7 +61,7 @@ button {
   color: var(--white);
   font-size: 3rem;
   margin-bottom: 2rem;
-  font-family: var(--eb);
+  font-family: var(--bai);
   padding: 5rem;
 }
 
@@ -142,7 +141,7 @@ button {
   color: var(--white);
   font-weight: 600;
   text-transform: uppercase;
-  font-family: var(--eb);
+  font-family: var(--bai);
   margin-bottom: 2rem;
 }
 
@@ -336,6 +335,10 @@ button {
   }
 }
 
+.menu__btn {
+  display: none;
+}
+
 @media (max-width: 767px) {
   body {
     font-size: 14px;
@@ -363,7 +366,7 @@ button {
   .game-section .item {
     margin: 0 10px 40px;
     width: 200px;
-    height: 280px;
+    height: 400px;
   }
 
   .game-section .item.active {
@@ -670,6 +673,10 @@ button {
   aspect-ratio: 1;
 }
 
+.nav__content-mobile {
+  display: none;
+}
+
 .ads__author-img img {
   width: 100%;
   aspect-ratio: 1;
@@ -869,7 +876,7 @@ a.functional-footer-desktop__element {
 
 .scrolled {
   background-color: var(--white);
-  color: var(--black);
+  color: var(--black) !important;
   transition: 0.4s;
 }
 
@@ -895,17 +902,304 @@ a.functional-footer-desktop__element {
   z-index: 1000;
 }
 
-.btn__wrap button i { 
-  color: black; 
+.btn__wrap button i {
+  color: black;
   font-size: 1.2rem;
 }
 
-.btn__wrap button:hover{ 
-  color: var(--white); 
+.btn__wrap button:hover {
+  color: var(--white);
   background-color: var(--black);
   border: 1px solid(--white);
 }
 
-.btn__wrap button i:hover { 
-  color: white; 
+.btn__wrap button i:hover {
+  color: white;
+}
+
+@media screen and (max-width: 1000px) {
+  body {
+    font-size: 8px;
+  }
+
+  .jumbotron__content h1 {
+    padding: 5rem 2rem;
+  }
+
+  .benefit {
+    height: auto;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+
+  .ads {
+    height: auto;
+    font-size: 1rem;
+    padding: 3rem 2rem;
+  }
+
+  .ads__wrap {
+    flex-direction: column;
+    width: 100%;
+    gap: 3rem;
+  }
+
+  .ads__element {
+    display: flex;
+    flex-direction: row-reverse;
+    width: 100%;
+  }
+
+  .ads__author {
+    flex-direction: column;
+    max-width: 30%;
+  }
+
+  .ads__p {
+    max-width: 60%;
+  }
+
+  .footer {
+    flex-direction: column;
+  }
+
+  .footer__element {
+    max-width: 100%;
+  }
+
+  .footer img {
+    width: 30%;
+  }
+}
+
+@media screen and (max-width: 926px) {
+  .jumbotron__content {
+    padding: 0 3rem;
+  }
+  .jumbotron__content-thumbail {
+    margin-bottom: 0;
+  }
+  .jumbotron__content h1 {
+    margin: 2rem 0 0 0;
+  }
+  .introduction {
+    flex-direction: column;
+    height: auto;
+    padding: 3rem 2rem;
+  }
+  .introduction__content {
+    max-width: 100%;
+  }
+  .introduction__img {
+    margin-top: 2rem;
+  }
+
+  .introduction__img video {
+    width: 100%;
+  }
+  .item-desc h3 {
+    font-size: 1.3rem;
+  }
+  .benefit__wrap {
+    display: flex;
+    flex-direction: column;
+  }
+  .ads__p {
+    font-size: 1.3rem;
+  }
+  .footer .logo__bocongthuong img {
+    width: 30%;
+  }
+
+  .nav__menu {
+    display: none;
+  }
+
+  .menu__btn {
+    display: block;
+    border: none;
+    background-color: transparent;
+  }
+
+  .menu__btn i {
+    color: var(--white);
+    font-size: 2rem;
+  }
+
+  .hamburger {
+    cursor: pointer;
+  }
+
+  .hamburger input {
+    display: none;
+  }
+
+  .hamburger svg {
+    /* The size of the SVG defines the overall size */
+    height: 3em;
+    /* Define the transition for transforming the SVG */
+    transition: transform 600ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .line {
+    fill: none;
+    stroke: #f4a261;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-width: 3;
+    /* Define the transition for transforming the Stroke */
+    transition: stroke-dasharray 600ms cubic-bezier(0.4, 0, 0.2, 1),
+      stroke-dashoffset 600ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .line-top-bottom {
+    stroke-dasharray: 12 63;
+  }
+
+  .hamburger input:checked + svg {
+    transform: rotate(-45deg);
+  }
+
+  .hamburger input:checked + svg .line-top-bottom {
+    stroke-dasharray: 20 300;
+    stroke-dashoffset: -32.42;
+  }
+
+  .nav {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+  .nav button {
+    padding: 1rem 0;
+    z-index: 11;
+  }
+  #functional-footer-desktop {
+    display: none;
+  }
+
+  .sidebar {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+  }
+
+  .sidebar a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+  }
+
+  .sidebar a:hover {
+    color: #f1f1f1;
+  }
+
+  .sidebar .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+  }
+
+  .openbtn {
+    font-size: 20px;
+    cursor: pointer;
+    background-color: #111;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+  }
+
+  .openbtn:hover {
+    background-color: #444;
+  }
+
+  #nav__mobile {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    z-index: 10;
+    background-color: black;
+    color: #fff;
+    top: 0;
+    width: 100%;
+    padding: 10% 0 50% 10%;
+    justify-content: space-between;
+    left: -100%; /* Start offscreen */
+    transition: left 0.3s ease-in-out;
+  }
+
+  #nav__mobile.open {
+    left: 0; /* Move to screen */
+  }
+
+  #nav__mobile.close {
+    left: -100%; /* Move to screen */
+  }
+  .nav__content-mobile a {
+    display: inline-block;
+    color: #eee;
+    font-size: 2.8rem;
+    font-weight: 600;
+    font-family: "Bai Jamjuree", sans-serif;
+    padding: 1.5rem 0 0 2rem;
+    text-decoration: none;
+  }
+
+  #exit-btn {
+    position: absolute;
+    margin-top: -5%;
+    right: 10%;
+    border: none;
+    background-color: transparent;
+  }
+
+  #exit-btn i {
+    font-size: 3rem;
+    color: white;
+  }
+}
+
+@media screen and (max-width: 789px) {
+  .row .column:nth-child(3) {
+    display: none;
+  }
+
+  .btn__wrap {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .ads__element {
+    flex-direction: column-reverse;
+  }
+  .ads__author {
+    max-width: 100%;
+  }
+  .ads__p {
+    max-width: 100%;
+  }
+  body {
+    font-size: 8px;
+  }
+  .jumbotron__content h1 {
+    padding: 2rem 0rem;
+    font-size: 2rem;
+  }
+}
+
+@media screen and (max-width: 500px) {
 }
