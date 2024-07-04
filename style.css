@@ -766,56 +766,60 @@ button {
   font-size: 2rem;
 }
 
-
 #functional-footer-desktop {
   position: fixed;
   top: 50%;
   right: 0;
   display: flex;
   flex-direction: column;
-  background-color: #01045e;
+  background-color: var(--black);
   width: 5%;
   align-items: center;
-  gap: 2rem;
+  /* gap: 2rem; */
   border-radius: 10px 0 0 10px;
 }
 
 a.functional-footer-desktop__element {
   color: #eee;
+  width: 5rem;
+  height: 5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .functional-footer-desktop__element i {
-  font-size: 3rem;
-  background-color: #01045e;
+  font-size: 1.5rem;
+  background-color: var(--black);
 }
 
 .functional-footer-desktop__element img {
-  width: 3.5rem;
+  width: 2.7rem;
 }
 
-.footer { 
+.footer {
   padding: 3rem 2rem;
   background-color: var(--gray);
-  display: flex; 
+  display: flex;
   justify-content: space-between;
 }
 
-.footer__element { 
-max-width: 25%;
+.footer__element {
+  max-width: 25%;
 }
 
-.footer .logo p { 
-  font-size: 2.5rem; 
-  font-weight: 700; 
-  margin-bottom: 2rem; 
+.footer .logo p {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
 }
 
-.footer .logo__bocongthuong { 
-  width: 50%; 
-  margin-bottom : 1rem;
+.footer .logo__bocongthuong {
+  width: 50%;
+  margin-bottom: 1.2rem;
 }
 
-.footer .logo__bocongthuong img { 
+.footer .logo__bocongthuong img {
   width: 100%;
 }
 
@@ -825,46 +829,83 @@ max-width: 25%;
   margin-bottom: 1.4rem;
 }
 
-.name { 
+.name {
   font-weight: 700;
 }
 
 .footer .text span {
-    font-weight: 700;
-
+  font-weight: 700;
 }
 
-.footer__element h2 { 
+.footer__element h2 {
   font-size: 1.8rem;
   margin-bottom: 1.4rem;
 }
 
-.footer__element a { 
-  font-size: 1.4rem;
+.footer__element a {
+  font-size: 1.2rem;
   display: flex;
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
   gap: 1rem;
   align-items: flex-start;
 }
 
-.footer__element a i { 
-  font-size: 1.4rem; 
+.footer__element a i {
+  font-size: 1.4rem;
   margin-top: 0.4rem;
 }
 
-.payment { 
+.payment {
   margin-top: 4rem;
 }
 
-.payment__logo { 
+.payment__logo {
   width: 60%;
 }
 
-.payment__logo img { 
+.payment__logo img {
   width: 100%;
 }
 
+.scrolled {
+  background-color: var(--white);
+  color: var(--black);
+  transition: 0.4s;
+}
 
+.btn__wrap {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  top: 30%;
+  right: 0;
+  color: white;
+  gap: 2rem;
+  margin-right: 0.3rem;
+}
 
+.btn__wrap button {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  border: none;
+  z-index: 1000;
+}
 
+.btn__wrap button i { 
+  color: black; 
+  font-size: 1.2rem;
+}
 
+.btn__wrap button:hover{ 
+  color: var(--white); 
+  background-color: var(--black);
+  border: 1px solid(--white);
+}
+
+.btn__wrap button i:hover { 
+  color: white; 
+}

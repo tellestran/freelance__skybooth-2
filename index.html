@@ -21,7 +21,17 @@
 </head>
 
 <body>
-    <section class="nav">
+
+    <div class="btn__wrap">
+        <button id="up">
+            <i class="fa-sharp fa-solid fa-arrow-up"></i>
+        </button>
+        <button id="down">
+            <i class="fa-sharp fa-solid fa-arrow-down"></i>
+        </button>
+    </div>
+    <div class="anchor anchor1"></div>
+    <section class="nav" id="navbar">
         <a class="nav__logo">Skybooth</a>
         <div class="nav__menu">
             <a href="#" class="nav__link">Trang chủ</a>
@@ -31,6 +41,8 @@
             <a href="#" class="nav__link">Về chúng tôi</a>
         </div>
     </section>
+    <div class="anchor anchor1"></div>
+
     <section class="jumbotron">
         <div class="jumbotron__content">
             <div class="jumbotron__content-thumbail">Skybooth</div>
@@ -39,6 +51,8 @@
 
         </div>
     </section>
+    <div class="anchor anchor2"></div>
+
     <section class="introduction">
         <div class="introduction__content">
             <div class="icon"><i class="fa-solid fa-camera-retro"></i></div>
@@ -57,6 +71,8 @@
             </video>
         </div>
     </section>
+    <div class="anchor anchor3"></div>
+
     <section class="game-section">
         <div class="icon"><i class="fa-solid fa-location-crosshairs"></i></div>
         <h2 class="section__title">MẠNG LƯỚI SKYBOOTH</h2>
@@ -100,6 +116,8 @@
             </div>
         </div>
     </section>
+    <div class="anchor anchor4"></div>
+
     <section class="benefit">
         <div class="icon"><i class="fa-solid fa-location-crosshairs"></i></div>
         <h2 class="section__title">GIÁ TRỊ CỦA SKYBOOTH</h2>
@@ -155,6 +173,8 @@
         </div>
 
     </section>
+    <div class="anchor anchor5"></div>
+
     <section id="accordion" class="tutorial">
         <!-- <div class="icon"><i class="fa-solid fa-location-crosshairs"></i></div> -->
         <h2 class="section__title">HƯỚNG DẪN SỬ DỤNG SKYBOOTH</h2>
@@ -212,6 +232,8 @@
             </p>
         </div>
     </section>
+    <div class="anchor anchor6"></div>
+
     <section class="ads">
         <div class="icon"><i class="fa-solid fa-location-crosshairs"></i></div>
         <h2 class="section__title">BÁO CHÍ NÓI VỀ SKYBOOTH</h2>
@@ -267,6 +289,8 @@
 
 
     </section>
+    <div class="anchor anchor7"></div>
+
     <section class="gallery">
         <div class="icon"><i class="fa-solid fa-gallery-thumbnails"></i></div>
         <h2 class="section__title">SKYBOOTH GALLERY</h2>
@@ -290,7 +314,9 @@
         </div>
 
     </section>
-    <!-- <section id="functional-footer-desktop">
+    <div class="anchor anchor8"></div>
+
+    <section id="functional-footer-desktop">
         <a href="tel:0934343141" class="functional-footer-desktop__element functional__call">
             <i class="fa-solid fa-phone"></i>
         </a>
@@ -304,7 +330,9 @@
         <a href="https://maps.app.goo.gl/WstBxqSqJmozUby87" class="functional-footer-desktop__element functional__map">
             <i class="fa-solid fa-map-location-dot"></i>
         </a>
-    </section> -->
+    </section>
+    <div class="anchor anchor9"></div>
+
     <section class="footer">
         <div class="footer__info footer__element">
             <div class="logo">
@@ -367,6 +395,7 @@
 
 
     </section>
+    <div class="anchor anchor10"></div>
 
     <script>
         document.addEventListener("DOMContentLoaded", function () {
@@ -397,9 +426,37 @@
                     }
                 });
             })
+            window.addEventListener('scroll', function () {
+                const navbar = document.getElementById('navbar');
+                if (window.scrollY > 50) { // Change 50 to the scroll threshold you prefer
+                    navbar.classList.add('scrolled');
+                } else {
+                    navbar.classList.remove('scrolled');
+                }
+            });
+            const sections = document.querySelectorAll('.anchor');
+            const btnUp = document.getElementById('up');
+            const btnDown = document.getElementById('down');
+            let currentSection = 0;
 
+            function scrollToSection(index) {
+                sections[index].scrollIntoView({ behavior: 'smooth' });
+            }
+
+            btnUp.addEventListener('click', function () {
+                if (currentSection > 0) {
+                    currentSection--;
+                    scrollToSection(currentSection);
+                }
+            });
+
+            btnDown.addEventListener('click', function () {
+                if (currentSection < sections.length - 1) {
+                    currentSection++;
+                    scrollToSection(currentSection);
+                }
+            });
         });
-
     </script>
 </body>
 
