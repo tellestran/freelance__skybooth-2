@@ -63,6 +63,7 @@ button {
   font-size: 3rem;
   margin-bottom: 2rem;
   font-family: var(--eb);
+  padding: 5rem;
 }
 
 .jumbotron__content p {
@@ -382,7 +383,7 @@ button {
   font-size: 2rem;
   color: var(--white);
   margin-bottom: 2rem;
-  font-family: var(--eb);
+  font-family: var(--bai);
   text-transform: uppercase;
 }
 
@@ -475,11 +476,14 @@ button {
 
 .benefit__icon i {
   color: var(--white);
-  font-size: 1.6rem;
+  font-size: 2rem;
 }
 
 .benefit__content h3 {
-  font-size: 2rem;
+  font-size: 1.6rem;
+  line-height: 2rem;
+  padding-right: 5rem;
+  margin-bottom: 1rem;
 }
 
 .benefit__content p {
@@ -501,7 +505,7 @@ button {
 
 #accordion {
   width: 100%;
-  padding: 7rem 2rem 0;
+  padding: 7rem 2rem 5rem 2rem;
 }
 .accordion {
   margin: 1rem 0;
@@ -603,7 +607,20 @@ button {
   font-family: "Bai Jamjuree", sans-serif;
 }
 
-.tutorial .icon {
+.ads {
+  height: 100vh;
+  width: 100%;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("./assets/img-1.jpg");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: 0 2rem;
+}
+
+.ads .icon {
   width: 5rem;
   aspect-ratio: 1/1;
   background-color: var(--white);
@@ -614,6 +631,240 @@ button {
   margin-bottom: 2rem;
 }
 
-.tutorial .icon i {
+.ads .icon i {
   font-size: 2rem;
 }
+
+.ads__wrap {
+  display: flex;
+  justify-content: space-around;
+}
+
+.ads__element {
+  max-height: 500px;
+  width: 30%;
+  display: flex;
+  color: var(--white);
+  flex-direction: column;
+  padding: 1.5rem 3rem;
+  background-color: rgb(0, 0, 0, 0.8);
+  color: var(--white);
+  /* text-align: justify; */
+  border-radius: 10px;
+  gap: 2rem;
+}
+
+.ads__p {
+  font-size: 1.5rem;
+  font-weight: 600;
+  line-height: 2.5rem;
+}
+
+.ads__author {
+  display: flex;
+  gap: 1.4rem;
+}
+
+.ads__author-img {
+  width: 30%;
+  aspect-ratio: 1;
+}
+
+.ads__author-img img {
+  width: 100%;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.ads__author-desc {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.ads__author-desc .name {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.ads__author-desc .company {
+  font-size: 1.2rem;
+}
+
+.gallery {
+  padding: 3rem 2rem;
+}
+
+.row {
+  display: -ms-flexbox;
+  /* IE10 */
+  display: flex;
+  -ms-flex-wrap: wrap;
+  /* IE10 */
+  flex-wrap: wrap;
+  padding: 0 4px;
+}
+
+/* Create four equal columns that sits next to each other */
+.column {
+  -ms-flex: 25%;
+  /* IE10 */
+  flex: 25%;
+  max-width: 50%;
+  padding: 0 4px;
+}
+
+.column img {
+  margin-top: 8px;
+  vertical-align: middle;
+  width: 100%;
+}
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 800px) {
+  .column {
+    -ms-flex: 50%;
+    flex: 50%;
+    max-width: 50%;
+  }
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column {
+    -ms-flex: 100%;
+    flex: 100%;
+    max-width: 100%;
+  }
+}
+
+.gallery {
+  width: 100%;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+    url("./assets/img-1.jpg");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: 4rem 2rem;
+}
+
+.gallery .icon {
+  width: 5rem;
+  aspect-ratio: 1/1;
+  background-color: var(--white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  margin-bottom: 2rem;
+}
+
+.gallery .icon i {
+  font-size: 2rem;
+}
+
+
+#functional-footer-desktop {
+  position: fixed;
+  top: 50%;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  background-color: #01045e;
+  width: 5%;
+  align-items: center;
+  gap: 2rem;
+  border-radius: 10px 0 0 10px;
+}
+
+a.functional-footer-desktop__element {
+  color: #eee;
+}
+
+.functional-footer-desktop__element i {
+  font-size: 3rem;
+  background-color: #01045e;
+}
+
+.functional-footer-desktop__element img {
+  width: 3.5rem;
+}
+
+.footer { 
+  padding: 3rem 2rem;
+  background-color: var(--gray);
+  display: flex; 
+  justify-content: space-between;
+}
+
+.footer__element { 
+max-width: 25%;
+}
+
+.footer .logo p { 
+  font-size: 2.5rem; 
+  font-weight: 700; 
+  margin-bottom: 2rem; 
+}
+
+.footer .logo__bocongthuong { 
+  width: 50%; 
+  margin-bottom : 1rem;
+}
+
+.footer .logo__bocongthuong img { 
+  width: 100%;
+}
+
+.footer .text {
+  font-size: 1.4rem;
+  font-weight: 400;
+  margin-bottom: 1.4rem;
+}
+
+.name { 
+  font-weight: 700;
+}
+
+.footer .text span {
+    font-weight: 700;
+
+}
+
+.footer__element h2 { 
+  font-size: 1.8rem;
+  margin-bottom: 1.4rem;
+}
+
+.footer__element a { 
+  font-size: 1.4rem;
+  display: flex;
+  margin-bottom: 1rem;
+  gap: 1rem;
+  align-items: flex-start;
+}
+
+.footer__element a i { 
+  font-size: 1.4rem; 
+  margin-top: 0.4rem;
+}
+
+.payment { 
+  margin-top: 4rem;
+}
+
+.payment__logo { 
+  width: 60%;
+}
+
+.payment__logo img { 
+  width: 100%;
+}
+
+
+
+
+
