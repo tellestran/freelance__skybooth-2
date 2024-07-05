@@ -1205,6 +1205,13 @@ a.functional-footer-desktop__element {
     padding: 2rem 0rem;
     font-size: 2rem;
   }
+  .introduction__content{
+    padding: 0;
+  }
+  .introduction__img{
+        padding: 0;
+
+  }
 }
 
 @media screen and (max-width: 500px) {
@@ -1214,5 +1221,19 @@ a.functional-footer-desktop__element {
   }
   .benefit__content p { 
     font-size: 0.8rem;
+  }
+}
+
+@media screen and (max-width: 400px){ 
+  .ads { 
+    height: auto;
+  }
+
+  .ads__element { 
+    gap: 1rem;
+  }
+
+  .ads__p { 
+    font-size: 1rem;
   }
 }
